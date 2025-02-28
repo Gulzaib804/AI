@@ -1,4 +1,7 @@
- <!DOCTYPE html>
+if;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9; <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,10 +14,7 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f9;
+            font-family: 'Arial', sans-ser
             color: #333;
             line-height: 1.6;
         }
@@ -174,21 +174,26 @@
         }
 
         .category-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: block; /* Ensure the anchor tag behaves like a block element */
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove underline */
+}
 
-        .category-card:hover {
-            transform: translateY(-5px);
-        }
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add hover effect */
+}
 
-        .category-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-        }
+.category-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #6200ea; /* Add color to the heading */
+}
 
         /* Footer */
         footer {
@@ -358,29 +363,29 @@
     </section>
 
     <!-- Categories Section -->
-    <section class="categories" id="categories">
-        <h2>Categories</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <h3>AI Writing</h3>
-            </div>
-            <div class="category-card">
-                <h3>Image Generation</h3>
-            </div>
-            <div class="category-card">
-                <h3>Coding</h3>
-            </div>
-            <div class="category-card">
-                <h3>Marketing</h3>
-            </div>
-            <div class="category-card">
-                <h3>Video Editing</h3>
-            </div>
-            <div class="category-card">
-                <h3>File Conversion</h3>
-            </div>
-        </div>
-    </section>
+<section class="categories" id="categories">
+    <h2>Categories</h2>
+    <div class="category-grid">
+        <a href="ai-writing.html" class="category-card">
+            <h3>AI Writing</h3>
+        </a>
+        <a href="image-generation.html" class="category-card">
+            <h3>Image Generation</h3>
+        </a>
+        <a href="coding.html" class="category-card">
+            <h3>Coding</h3>
+        </a>
+        <a href="marketing.html" class="category-card">
+            <h3>Marketing</h3>
+        </a>
+        <a href="video-editing.html" class="category-card">
+            <h3>Video Editing</h3>
+        </a>
+        <a href="file-conversion.html" class="category-card">
+            <h3>File Conversion</h3>
+        </a>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
