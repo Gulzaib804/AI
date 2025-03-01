@@ -6,8 +6,6 @@
     <meta name="description" content="Discover and compare the best AI tools for startups, developers, and marketers. Find tools for AI writing, image generation, coding, and more.">
     <meta name="keywords" content="AI tools, AI directory, best AI tools, AI for developers, AI for marketers">
     <title>AI Tools Directory - Find the Best AI Tools</title>
-    <!-- Google AdSense Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_AD_UNIT_ID" crossorigin="anonymous"></script>
     <style>
         /* General Styles */
         body {
@@ -79,26 +77,27 @@
         .hero {
             background: linear-gradient(135deg, #6200ea, #3700b3);
             color: white;
-            padding: 60px 20px;
+            padding: 100px 20px;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin: 10px 0 20px;
+            font-size: 1.5rem;
+            margin: 20px 0 40px;
         }
 
         .hero .cta-button {
             background: white;
             color: #6200ea;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border-radius: 5px;
             font-weight: bold;
+            font-size: 1.2rem;
             transition: background 0.3s ease;
         }
 
@@ -106,93 +105,64 @@
             background: #f4f4f9;
         }
 
-        /* Featured Tools */
-        .featured-tools {
-            padding: 40px 20px;
+        /* Featured Categories Section */
+        .featured-categories {
+            padding: 60px 20px;
             text-align: center;
-        }
-
-        .featured-tools h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .tool-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .tool-card {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.3s ease;
-            display: block;
-            color: inherit;
-            text-decoration: none;
         }
 
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .tool-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.5rem;
+        .featured-categories h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
             color: #6200ea;
-        }
-
-        .tool-card p {
-            margin: 0 0 15px;
-            color: #666;
-        }
-
-        .tool-card span {
-            color: #6200ea;
-            font-weight: bold;
-        }
-
-        /* Categories Section */
-        .categories {
-            background: #f4f4f9;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .categories h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
         }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .category-card {
-            background: white;
+            background: #f4f4f9;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            transition: transform 0.3s ease;
-            display: block;
-            color: inherit;
-            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
         }
 
         .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         .category-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            margin: 0 0 10px;
             color: #6200ea;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .category-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #6200ea;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .category-card a:hover {
+            background: #3700b3;
         }
 
         /* Footer */
@@ -270,22 +240,6 @@
             background: #3700b3;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-icons img {
-            width: 32px;
-            height: 32px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-
         .footer-bottom {
             margin-top: 20px;
             border-top: 1px solid #444;
@@ -309,7 +263,7 @@
                 font-size: 1rem;
             }
 
-            .tool-grid, .category-grid {
+            .category-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -326,9 +280,12 @@
     <nav>
         <div class="logo">AI Tools</div>
         <ul>
-            <li><a href="#featured">Featured Tools</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="#featured-categories">Categories</a></li>
+            <li><a href="#writing-tools">Writing Tools</a></li>
+            <li><a href="#video-editing-tools">Video Editing Tools</a></li>
+            <li><a href="#image-tools">Image Tools</a></li>
+            <li><a href="#file-conversion-tools">File Conversion Tools</a></li>
+            <li><a href="#voice-editing-tools">Voice Editing Tools</a></li>
         </ul>
     </nav>
 
@@ -336,53 +293,38 @@
     <section class="hero">
         <h2>Find the Best AI Tools for Your Projects</h2>
         <p>Explore a curated directory of AI tools for writing, coding, design, and more.</p>
-        <a href="#featured" class="cta-button">Explore Tools</a>
+        <a href="#featured-categories" class="cta-button">Explore Categories</a>
     </section>
 
-    <!-- Featured Tools -->
-    <section class="featured-tools" id="featured">
-        <h2>Featured Tools</h2>
-        <div class="tool-grid">
-            <a href="https://chat.openai.com" target="_blank" class="tool-card">
-                <h3>ChatGPT</h3>
-                <p>AI-powered writing assistant for content creation.</p>
-                <span>Learn More</span>
-            </a>
-            <a href="https://midjourney.com" target="_blank" class="tool-card">
-                <h3>MidJourney</h3>
-                <p>AI tool for generating stunning images from text prompts.</p>
-                <span>Learn More</span>
-            </a>
-            <a href="https://copilot.github.com" target="_blank" class="tool-card">
-                <h3>GitHub Copilot</h3>
-                <p>AI pair programmer that helps you write code faster.</p>
-                <span>Learn More</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Categories Section -->
-    <section class="categories" id="categories">
-        <h2>Categories</h2>
+    <!-- Featured Categories Section -->
+    <section class="featured-categories" id="featured-categories">
+        <h2>Featured Categories</h2>
         <div class="category-grid">
-            <a href="ai-writing.html" class="category-card">
-                <h3>AI Writing</h3>
-            </a>
-            <a href="image-generation.html" class="category-card">
-                <h3>Image Generation</h3>
-            </a>
-            <a href="coding.html" class="category-card">
-                <h3>Coding</h3>
-            </a>
-            <a href="marketing.html" class="category-card">
-                <h3>Marketing</h3>
-            </a>
-            <a href="video-editing.html" class="category-card">
-                <h3>Video Editing</h3>
-            </a>
-            <a href="file-conversion.html" class="category-card">
-                <h3>File Conversion</h3>
-            </a>
+            <div class="category-card">
+                <h3>Writing Tools</h3>
+                <p>AI tools for content creation, grammar, and writing assistance.</p>
+                <a href="#writing-tools">Explore Writing Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Video Editing Tools</h3>
+                <p>AI tools for video editing, creation, and enhancement.</p>
+                <a href="#video-editing-tools">Explore Video Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Image Tools</h3>
+                <p>AI tools for image generation, editing, and enhancement.</p>
+                <a href="#image-tools">Explore Image Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>File Conversion Tools</h3>
+                <p>AI tools for converting files (PDF, Word, JPG, etc.).</p>
+                <a href="#file-conversion-tools">Explore Conversion Tools</a>
+            </div>
+            <div class="category-card">
+                <h3>Voice Editing Tools</h3>
+                <p>AI tools for voice editing, text-to-speech, and audio enhancement.</p>
+                <a href="#voice-editing-tools">Explore Voice Tools</a>
+            </div>
         </div>
     </section>
 
@@ -396,9 +338,12 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#featured">Featured Tools</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#featured-categories">Categories</a></li>
+                    <li><a href="#writing-tools">Writing Tools</a></li>
+                    <li><a href="#video-editing-tools">Video Editing Tools</a></li>
+                    <li><a href="#image-tools">Image Tools</a></li>
+                    <li><a href="#file-conversion-tools">File Conversion Tools</a></li>
+                    <li><a href="#voice-editing-tools">Voice Editing Tools</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -416,4 +361,3 @@
     </footer>
 </body>
 </html>
-         
