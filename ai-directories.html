@@ -291,37 +291,168 @@
         </div>
     </section>
 
-    <!-- Video Editing Tools Section -->
-    <section class="tools" id="video-editing-tools">
-        <h2>Video Editing Tools</h2>
-        <div class="tool-grid" id="video-editing-tools-grid">
-            <!-- Video editing tools will be dynamically added here -->
-        </div>
-    </section>
+  <!-- Video Editing Tools Section -->
+<section class="tools" id="video-editing-tools">
+    <h2>Video Editing Tools</h2>
+    <div class="tool-grid" id="video-editing-tools-grid">
+        <!-- Video editing tools will be dynamically added here -->
+    </div>
+</section>
 
-    <!-- Image Tools Section -->
-    <section class="tools" id="image-tools">
-        <h2>Image Tools</h2>
-        <div class="tool-grid" id="image-tools-grid">
-            <!-- Image tools will be dynamically added here -->
-        </div>
-    </section>
+<script>
+    // Video Editing Tools Data
+    const videoEditingTools = [
+        { name: "Runway ML", description: "AI tool for creative video editing.", link: "https://runwayml.com" },
+        { name: "Descript", description: "AI tool for video and audio editing.", link: "https://descript.com" },
+        { name: "Magisto", description: "AI tool for automated video editing.", link: "https://magisto.com" },
+        { name: "Animoto", description: "AI tool for creating videos from photos and clips.", link: "https://animoto.com" },
+        { name: "InVideo", description: "AI tool for creating professional videos.", link: "https://invideo.io" },
+        { name: "FlexClip", description: "AI tool for video creation and editing.", link: "https://flexclip.com" },
+        { name: "Pictory", description: "AI tool for creating videos from text.", link: "https://pictory.ai" },
+        { name: "Synthesia", description: "AI tool for creating videos with AI avatars.", link: "https://synthesia.io" },
+        { name: "Lumen5", description: "AI tool for turning blog posts into videos.", link: "https://lumen5.com" },
+        { name: "Veed.io", description: "AI tool for simple video editing.", link: "https://veed.io" },
+    ];
 
-    <!-- File Conversion Tools Section -->
-    <section class="tools" id="file-conversion-tools">
-        <h2>File Conversion Tools</h2>
-        <div class="tool-grid" id="file-conversion-tools-grid">
-            <!-- File conversion tools will be dynamically added here -->
-        </div>
-    </section>
+    // Function to display video editing tools
+    function displayVideoEditingTools() {
+        const videoEditingToolsGrid = document.getElementById('video-editing-tools-grid');
+        videoEditingTools.forEach(tool => {
+            videoEditingToolsGrid.innerHTML += `
+                <a href="${tool.link}" target="_blank" class="tool-card">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <span>Learn More</span>
+                </a>
+            `;
+        });
+    }
 
+    // Initial display
+    displayVideoEditingTools();
+</script>
+
+   <!-- Image Tools Section -->
+<section class="tools" id="image-tools">
+    <h2>Image Tools</h2>
+    <div class="tool-grid" id="image-tools-grid">
+        <!-- Image tools will be dynamically added here -->
+    </div>
+</section>
+
+<script>
+    // Image Tools Data
+    const imageTools = [
+        { name: "MidJourney", description: "AI tool for generating stunning images from text prompts.", link: "https://midjourney.com" },
+        { name: "DALL·E", description: "AI tool for creating images from text descriptions.", link: "https://openai.com/dall-e" },
+        { name: "Stable Diffusion", description: "Open-source AI image generation tool.", link: "https://stability.ai" },
+        { name: "Artbreeder", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
+        { name: "DeepArt", description: "AI tool for turning photos into art.", link: "https://deepart.io" },
+        { name: "Runway ML", description: "AI tool for creative image and video editing.", link: "https://runwayml.com" },
+        { name: "NightCafe", description: "AI art generator for creating unique images.", link: "https://nightcafe.studio" },
+        { name: "Deep Dream Generator", description: "AI tool for creating dream-like images.", link: "https://deepdreamgenerator.com" },
+        { name: "This Person Does Not Exist", description: "AI tool for generating realistic human faces.", link: "https://thispersondoesnotexist.com" },
+        { name: "StyleGAN", description: "AI tool for generating high-quality images.", link: "https://github.com/NVlabs/stylegan" },
+    ];
+
+    // Function to display image tools
+    function displayImageTools() {
+        const imageToolsGrid = document.getElementById('image-tools-grid');
+        imageTools.forEach(tool => {
+            imageToolsGrid.innerHTML += `
+                <a href="${tool.link}" target="_blank" class="tool-card">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <span>Learn More</span>
+                </a>
+            `;
+        });
+    }
+
+    // Initial display
+    displayImageTools();
+</script>
+
+   <!-- File Conversion Tools Section -->
+<section class="tools" id="file-conversion-tools">
+    <h2>File Conversion Tools</h2>
+    <div class="tool-grid" id="file-conversion-tools-grid">
+        <!-- File conversion tools will be dynamically added here -->
+    </div>
+</section>
+
+<script>
+    // File Conversion Tools Data
+    const fileConversionTools = [
+        { name: "Smallpdf", description: "AI tool for converting files (PDF, Word, JPG, etc.).", link: "https://smallpdf.com" },
+        { name: "ILovePDF", description: "AI tool for PDF conversion and editing.", link: "https://ilovepdf.com" },
+        { name: "Zamzar", description: "AI tool for converting files between formats.", link: "https://zamzar.com" },
+        { name: "PDF Candy", description: "AI tool for PDF editing and conversion.", link: "https://pdfcandy.com" },
+        { name: "Online2PDF", description: "AI tool for converting files to PDF.", link: "https://online2pdf.com" },
+        { name: "CloudConvert", description: "AI tool for converting files in the cloud.", link: "https://cloudconvert.com" },
+        { name: "Convertio", description: "AI tool for file conversion (PDF, Word, JPG, etc.).", link: "https://convertio.co" },
+        { name: "PDF Converter", description: "AI tool for converting PDFs to other formats.", link: "https://pdfconverter.com" },
+        { name: "DocuFreezer", description: "AI tool for batch file conversion.", link: "https://docufreezer.com" },
+        { name: "AConvert", description: "AI tool for converting files and documents.", link: "https://aconvert.com" },
+    ];
+
+    // Function to display file conversion tools
+    function displayFileConversionTools() {
+        const fileConversionToolsGrid = document.getElementById('file-conversion-tools-grid');
+        fileConversionTools.forEach(tool => {
+            fileConversionToolsGrid.innerHTML += `
+                <a href="${tool.link}" target="_blank" class="tool-card">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <span>Learn More</span>
+                </a>
+            `;
+        });
+    }
+
+    // Initial display
+    displayFileConversionTools();
+</script>
     <!-- Voice Editing Tools Section -->
-    <section class="tools" id="voice-editing-tools">
-        <h2>Voice Editing Tools</h2>
-        <div class="tool-grid" id="voice-editing-tools-grid">
-            <!-- Voice editing tools will be dynamically added here -->
-        </div>
-    </section>
+<section class="tools" id="voice-editing-tools">
+    <h2>Voice Editing Tools</h2>
+    <div class="tool-grid" id="voice-editing-tools-grid">
+        <!-- Voice editing tools will be dynamically added here -->
+    </div>
+</section>
+
+<script>
+    // Voice Editing Tools Data
+    const voiceEditingTools = [
+        { name: "Descript", description: "AI tool for editing audio and voice recordings.", link: "https://descript.com" },
+        { name: "Audacity", description: "AI tool for audio editing and recording.", link: "https://audacityteam.org" },
+        { name: "Adobe Audition", description: "AI tool for professional audio editing.", link: "https://adobe.com/audition" },
+        { name: "iZotope RX", description: "AI tool for audio repair and enhancement.", link: "https://izotope.com" },
+        { name: "Voicemod", description: "AI tool for real-time voice changing.", link: "https://voicemod.net" },
+        { name: "Resemble AI", description: "AI tool for creating AI-generated voices.", link: "https://resemble.ai" },
+        { name: "Murf.ai", description: "AI tool for text-to-speech and voiceovers.", link: "https://murf.ai" },
+        { name: "Speechelo", description: "AI tool for generating realistic voiceovers.", link: "https://speechelo.com" },
+        { name: "Lovo.ai", description: "AI tool for text-to-speech and voice cloning.", link: "https://lovo.ai" },
+        { name: "Voice.ai", description: "AI tool for voice changing and editing.", link: "https://voice.ai" },
+    ];
+
+    // Function to display voice editing tools
+    function displayVoiceEditingTools() {
+        const voiceEditingToolsGrid = document.getElementById('voice-editing-tools-grid');
+        voiceEditingTools.forEach(tool => {
+            voiceEditingToolsGrid.innerHTML += `
+                <a href="${tool.link}" target="_blank" class="tool-card">
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <span>Learn More</span>
+                </a>
+            `;
+        });
+    }
+
+    // Initial display
+    displayVoiceEditingTools();
+</script>
 
     <!-- Footer -->
     <footer>
