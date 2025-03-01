@@ -6,8 +6,6 @@
     <meta name="description" content="Discover and compare the best AI tools for startups, developers, and marketers. Find tools for AI writing, image generation, coding, and more.">
     <meta name="keywords" content="AI tools, AI directory, best AI tools, AI for developers, AI for marketers">
     <title>AI Tools Directory - Find the Best AI Tools</title>
-    <!-- Google AdSense Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_AD_UNIT_ID" crossorigin="anonymous"></script>
     <style>
         /* General Styles */
         body {
@@ -106,13 +104,13 @@
             background: #f4f4f9;
         }
 
-        /* Featured Tools */
-        .featured-tools {
+        /* Tools Section */
+        .tools {
             padding: 40px 20px;
             text-align: center;
         }
 
-        .featured-tools h2 {
+        .tools h2 {
             font-size: 2rem;
             margin-bottom: 20px;
         }
@@ -153,46 +151,6 @@
         .tool-card span {
             color: #6200ea;
             font-weight: bold;
-        }
-
-        /* Categories Section */
-        .categories {
-            background: #f4f4f9;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .categories h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.3s ease;
-            display: block;
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .category-card h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: #6200ea;
         }
 
         /* Footer */
@@ -270,22 +228,6 @@
             background: #3700b3;
         }
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .social-icons img {
-            width: 32px;
-            height: 32px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.2);
-        }
-
         .footer-bottom {
             margin-top: 20px;
             border-top: 1px solid #444;
@@ -309,7 +251,7 @@
                 font-size: 1rem;
             }
 
-            .tool-grid, .category-grid {
+            .tool-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -326,10 +268,11 @@
     <nav>
         <div class="logo">AI Tools</div>
         <ul>
-            <li><a href="#featured">Featured Tools</a></li>
-            <li><a href="#categories">Categories</a></li>
-            <li><a href="AI
-/About Us">About Us</a></li>
+            <li><a href="#writing-tools">Writing Tools</a></li>
+            <li><a href="#video-editing-tools">Video Editing Tools</a></li>
+            <li><a href="#image-tools">Image Tools</a></li>
+            <li><a href="#file-conversion-tools">File Conversion Tools</a></li>
+            <li><a href="#voice-editing-tools">Voice Editing Tools</a></li>
         </ul>
     </nav>
 
@@ -337,22 +280,46 @@
     <section class="hero">
         <h2>Find the Best AI Tools for Your Projects</h2>
         <p>Explore a curated directory of AI tools for writing, coding, design, and more.</p>
-        <a href="#featured" class="cta-button">Explore Tools</a>
+        <a href="#writing-tools" class="cta-button">Explore Tools</a>
     </section>
 
-    <!-- Featured Tools -->
-    <section class="featured-tools" id="featured">
-        <h2>Featured Tools</h2>
-        <div class="tool-grid" id="featured-tools-grid">
-            <!-- Featured tools will be dynamically added here -->
+    <!-- Writing Tools Section -->
+    <section class="tools" id="writing-tools">
+        <h2>Writing Tools</h2>
+        <div class="tool-grid" id="writing-tools-grid">
+            <!-- Writing tools will be dynamically added here -->
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories" id="categories">
-        <h2>Categories</h2>
-        <div class="category-grid" id="category-grid">
-            <!-- Categories will be dynamically added here -->
+    <!-- Video Editing Tools Section -->
+    <section class="tools" id="video-editing-tools">
+        <h2>Video Editing Tools</h2>
+        <div class="tool-grid" id="video-editing-tools-grid">
+            <!-- Video editing tools will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Image Tools Section -->
+    <section class="tools" id="image-tools">
+        <h2>Image Tools</h2>
+        <div class="tool-grid" id="image-tools-grid">
+            <!-- Image tools will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- File Conversion Tools Section -->
+    <section class="tools" id="file-conversion-tools">
+        <h2>File Conversion Tools</h2>
+        <div class="tool-grid" id="file-conversion-tools-grid">
+            <!-- File conversion tools will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Voice Editing Tools Section -->
+    <section class="tools" id="voice-editing-tools">
+        <h2>Voice Editing Tools</h2>
+        <div class="tool-grid" id="voice-editing-tools-grid">
+            <!-- Voice editing tools will be dynamically added here -->
         </div>
     </section>
 
@@ -366,10 +333,11 @@
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#featured">Featured Tools</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="AI
-/About Us">About Us</a></li>
+                    <li><a href="#writing-tools">Writing Tools</a></li>
+                    <li><a href="#video-editing-tools">Video Editing Tools</a></li>
+                    <li><a href="#image-tools">Image Tools</a></li>
+                    <li><a href="#file-conversion-tools">File Conversion Tools</a></li>
+                    <li><a href="#voice-editing-tools">Voice Editing Tools</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -387,47 +355,81 @@
     </footer>
 
     <script>
-        // Sample Data: 200 AI Tools across 20 Categories
-        const tools = [
-            // AI Writing (10 Tools)
-            { name: "ChatGPT", category: "AI Writing", description: "AI-powered writing assistant for content creation.", link: "https://chat.openai.com" },
-            { name: "Jasper AI", category: "AI Writing", description: "AI writing tool for marketers and businesses.", link: "https://jasper.ai" },
-            { name: "Writesonic", category: "AI Writing", description: "AI writing assistant for blogs, ads, and more.", link: "https://writesonic.com" },
-            { name: "Copy.ai", category: "AI Writing", description: "AI tool for generating marketing copy.", link: "https://copy.ai" },
-            { name: "Rytr", category: "AI Writing", description: "AI writing assistant for content creation.", link: "https://rytr.me" },
-            { name: "Sudowrite", category: "AI Writing", description: "AI tool for creative writing and storytelling.", link: "https://sudowrite.com" },
-            { name: "Grammarly", category: "AI Writing", description: "AI-powered writing assistant for grammar and style.", link: "https://grammarly.com" },
-            { name: "ProWritingAid", category: "AI Writing", description: "AI tool for improving writing style and grammar.", link: "https://prowritingaid.com" },
-            { name: "Wordtune", category: "AI Writing", description: "AI tool for rewriting and improving sentences.", link: "https://wordtune.com" },
-            { name: "Quillbot", category: "AI Writing", description: "AI paraphrasing tool for rewriting content.", link: "https://quillbot.com" },
-
-            // Image Generation (10 Tools)
-            { name: "MidJourney", category: "Image Generation", description: "AI tool for generating stunning images from text prompts.", link: "https://midjourney.com" },
-            { name: "DALL·E", category: "Image Generation", description: "AI tool for creating images from text descriptions.", link: "https://openai.com/dall-e" },
-            { name: "Stable Diffusion", category: "Image Generation", description: "Open-source AI image generation tool.", link: "https://stability.ai" },
-            { name: "Artbreeder", category: "Image Generation", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
-            { name: "DeepArt", category: "Image Generation", description: "AI tool for turning photos into art.", link: "https://deepart.io" },
-            { name: "Runway ML", category: "Image Generation", description: "AI tool for creative image and video editing.", link: "https://runwayml.com" },
-            { name: "NightCafe", category: "Image Generation", description: "AI art generator for creating unique images.", link: "https://nightcafe.studio" },
-            { name: "Deep Dream Generator", category: "Image Generation", description: "AI tool for creating dream-like images.", link: "https://deepdreamgenerator.com" },
-            { name: "This Person Does Not Exist", category: "Image Generation", description: "AI tool for generating realistic human faces.", link: "https://thispersondoesnotexist.com" },
-            { name: "StyleGAN", category: "Image Generation", description: "AI tool for generating high-quality images.", link: "https://github.com/NVlabs/stylegan" },
-
-            // Add more tools and categories as needed...
+        // Writing Tools Data
+        const writingTools = [
+            { name: "ChatGPT", description: "AI-powered writing assistant for content creation.", link: "https://chat.openai.com" },
+            { name: "Jasper AI", description: "AI writing tool for marketers and businesses.", link: "https://jasper.ai" },
+            { name: "Writesonic", description: "AI writing assistant for blogs, ads, and more.", link: "https://writesonic.com" },
+            { name: "Copy.ai", description: "AI tool for generating marketing copy.", link: "https://copy.ai" },
+            { name: "Rytr", description: "AI writing assistant for content creation.", link: "https://rytr.me" },
+            { name: "Sudowrite", description: "AI tool for creative writing and storytelling.", link: "https://sudowrite.com" },
+            { name: "Grammarly", description: "AI-powered writing assistant for grammar and style.", link: "https://grammarly.com" },
+            { name: "ProWritingAid", description: "AI tool for improving writing style and grammar.", link: "https://prowritingaid.com" },
+            { name: "Wordtune", description: "AI tool for rewriting and improving sentences.", link: "https://wordtune.com" },
+            { name: "Quillbot", description: "AI paraphrasing tool for rewriting content.", link: "https://quillbot.com" },
         ];
 
-        const categories = [
-            "AI Writing", "Image Generation", "Coding", "Marketing", "Video Editing", "File Conversion",
-            "Data Analysis", "Chatbots", "Design", "Education", "Audio Processing", "Healthcare", "Finance",
-            "Gaming", "E-commerce", "Cybersecurity", "Robotics", "Natural Language Processing", "Computer Vision", "AI Ethics"
+        // Video Editing Tools Data
+        const videoEditingTools = [
+            { name: "Runway ML", description: "AI tool for creative video editing.", link: "https://runwayml.com" },
+            { name: "Descript", description: "AI tool for video and audio editing.", link: "https://descript.com" },
+            { name: "Magisto", description: "AI tool for automated video editing.", link: "https://magisto.com" },
+            { name: "Animoto", description: "AI tool for creating videos from photos and clips.", link: "https://animoto.com" },
+            { name: "InVideo", description: "AI tool for creating professional videos.", link: "https://invideo.io" },
+            { name: "FlexClip", description: "AI tool for video creation and editing.", link: "https://flexclip.com" },
+            { name: "Pictory", description: "AI tool for creating videos from text.", link: "https://pictory.ai" },
+            { name: "Synthesia", description: "AI tool for creating videos with AI avatars.", link: "https://synthesia.io" },
+            { name: "Lumen5", description: "AI tool for turning blog posts into videos.", link: "https://lumen5.com" },
+            { name: "Veed.io", description: "AI tool for simple video editing.", link: "https://veed.io" },
         ];
 
-        // Function to display featured tools
-        function displayFeaturedTools() {
-            const featuredToolsGrid = document.getElementById('featured-tools-grid');
-            const featuredTools = tools.slice(0, 6); // Display first 6 tools as featured
-            featuredTools.forEach(tool => {
-                featuredToolsGrid.innerHTML += `
+        // Image Tools Data
+        const imageTools = [
+            { name: "MidJourney", description: "AI tool for generating stunning images from text prompts.", link: "https://midjourney.com" },
+            { name: "DALL·E", description: "AI tool for creating images from text descriptions.", link: "https://openai.com/dall-e" },
+            { name: "Stable Diffusion", description: "Open-source AI image generation tool.", link: "https://stability.ai" },
+            { name: "Artbreeder", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
+            { name: "DeepArt", description: "AI tool for turning photos into art.", link: "https://deepart.io" },
+            { name: "Runway ML", description: "AI tool for creative image and video editing.", link: "https://runwayml.com" },
+            { name: "NightCafe", description: "AI art generator for creating unique images.", link: "https://nightcafe.studio" },
+            { name: "Deep Dream Generator", description: "AI tool for creating dream-like images.", link: "https://deepdreamgenerator.com" },
+            { name: "This Person Does Not Exist", description: "AI tool for generating realistic human faces.", link: "https://thispersondoesnotexist.com" },
+            { name: "StyleGAN", description: "AI tool for generating high-quality images.", link: "https://github.com/NVlabs/stylegan" },
+        ];
+
+        // File Conversion Tools Data
+        const fileConversionTools = [
+            { name: "Smallpdf", description: "AI tool for converting files (PDF, Word, JPG, etc.).", link: "https://smallpdf.com" },
+            { name: "ILovePDF", description: "AI tool for PDF conversion and editing.", link: "https://ilovepdf.com" },
+            { name: "Zamzar", description: "AI tool for converting files between formats.", link: "https://zamzar.com" },
+            { name: "PDF Candy", description: "AI tool for PDF editing and conversion.", link: "https://pdfcandy.com" },
+            { name: "Online2PDF", description: "AI tool for converting files to PDF.", link: "https://online2pdf.com" },
+            { name: "CloudConvert", description: "AI tool for converting files in the cloud.", link: "https://cloudconvert.com" },
+            { name: "Convertio", description: "AI tool for file conversion (PDF, Word, JPG, etc.).", link: "https://convertio.co" },
+            { name: "PDF Converter", description: "AI tool for converting PDFs to other formats.", link: "https://pdfconverter.com" },
+            { name: "DocuFreezer", description: "AI tool for batch file conversion.", link: "https://docufreezer.com" },
+            { name: "AConvert", description: "AI tool for converting files and documents.", link: "https://aconvert.com" },
+        ];
+
+        // Voice Editing Tools Data
+        const voiceEditingTools = [
+            { name: "Descript", description: "AI tool for editing audio and voice recordings.", link: "https://descript.com" },
+            { name: "Audacity", description: "AI tool for audio editing and recording.", link: "https://audacityteam.org" },
+            { name: "Adobe Audition", description: "AI tool for professional audio editing.", link: "https://adobe.com/audition" },
+            { name: "iZotope RX", description: "AI tool for audio repair and enhancement.", link: "https://izotope.com" },
+            { name: "Voicemod", description: "AI tool for real-time voice changing.", link: "https://voicemod.net" },
+            { name: "Resemble AI", description: "AI tool for creating AI-generated voices.", link: "https://resemble.ai" },
+            { name: "Murf.ai", description: "AI tool for text-to-speech and voiceovers.", link: "https://murf.ai" },
+            { name: "Speechelo", description: "AI tool for generating realistic voiceovers.", link: "https://speechelo.com" },
+            { name: "Lovo.ai", description: "AI tool for text-to-speech and voice cloning.", link: "https://lovo.ai" },
+            { name: "Voice.ai", description: "AI tool for voice changing and editing.", link: "https://voice.ai" },
+        ];
+
+        // Function to display tools
+        function displayTools(tools, gridId) {
+            const toolGrid = document.getElementById(gridId);
+            tools.forEach(tool => {
+                toolGrid.innerHTML += `
                     <a href="${tool.link}" target="_blank" class="tool-card">
                         <h3>${tool.name}</h3>
                         <p>${tool.description}</p>
@@ -437,21 +439,12 @@
             });
         }
 
-        // Function to display categories
-        function displayCategories() {
-            const categoryGrid = document.getElementById('category-grid');
-            categories.forEach(category => {
-                categoryGrid.innerHTML += `
-                    <a href="${category.toLowerCase().replace(/ /g, '-')}.html" class="category-card">
-                        <h3>${category}</h3>
-                    </a>
-                `;
-            });
-        }
-
         // Initial display
-        displayFeaturedTools();
-        displayCategories();
+        displayTools(writingTools, "writing-tools-grid");
+        displayTools(videoEditingTools, "video-editing-tools-grid");
+        displayTools(imageTools, "image-tools-grid");
+        displayTools(fileConversionTools, "file-conversion-tools-grid");
+        displayTools(voiceEditingTools, "voice-editing-tools-grid");
     </script>
 </body>
 </html>
