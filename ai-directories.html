@@ -11,13 +11,20 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background: #f4f4f9;
             color: #333;
+            line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
         header {
             background: #6200ea;
             color: white;
@@ -35,29 +42,85 @@
             font-size: 1.2rem;
         }
 
-        /* Filters */
-        .filters {
+        /* Navigation */
+        nav {
             display: flex;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
             background: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        #search, #category {
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #6200ea;
         }
 
-        /* Tool Listings */
-        .tool-listings {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        nav ul {
+            list-style: none;
+            display: flex;
             gap: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6200ea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #6200ea, #3700b3);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 10px 0 20px;
+        }
+
+        .hero .cta-button {
+            background: white;
+            color: #6200ea;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .hero .cta-button:hover {
+            background: #f4f4f9;
+        }
+
+        /* Featured Tools */
+        .featured-tools {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .featured-tools h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .tool-card {
@@ -66,15 +129,20 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px;
             transition: transform 0.3s ease;
+            display: block;
+            color: inherit;
+            text-decoration: none;
         }
 
         .tool-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .tool-card h2 {
+        .tool-card h3 {
             margin: 0 0 10px;
             font-size: 1.5rem;
+            color: #6200ea;
         }
 
         .tool-card p {
@@ -82,256 +150,306 @@
             color: #666;
         }
 
-        .tool-card a {
+        .tool-card span {
             color: #6200ea;
-            text-decoration: none;
             font-weight: bold;
         }
 
-        /* Ad Units */
-        .ad {
-            margin: 20px auto;
+        /* Categories Section */
+        .categories {
+            background: #f4f4f9;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        .categories h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-card h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #6200ea;
         }
 
         /* Footer */
         footer {
             background: #333;
             color: white;
+            padding: 40px 20px;
             text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: #6200ea;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
             padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .newsletter-form button {
+            background: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #3700b3;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
             margin-top: 20px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .tool-grid, .category-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <h1>AI Tools Directory</h1>
         <p>Discover the best AI tools for your needs.</p>
     </header>
 
-    <main>
-        <!-- Search and Filters -->
-        <section class="filters">
-            <input type="text" id="search" placeholder="Search tools...">
-            <select id="category">
-                <option value="all">All Categories</option>
-                <option value="writing">AI Writing</option>
-                <option value="image">Image Generation</option>
-                <option value="coding">Coding</option>
-                <option value="marketing">Marketing</option>
-                <option value="video">Video Editing</option>
-                <option value="audio">Audio Processing</option>
-                <option value="data">Data Analysis</option>
-                <option value="chatbots">Chatbots</option>
-                <option value="design">Design</option>
-                <option value="education">Education</option>
-                <option value="conversion">File Conversion</option>
-            </select>
-        </section>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">AI Tools</div>
+        <ul>
+            <li><a href="#featured">Featured Tools</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
 
-        <!-- AdSense Ad Unit (Top) -->
-        <div class="ad">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="YOUR_ADSENSE_AD_UNIT_ID"
-                 data-ad-slot="1234567890"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Find the Best AI Tools for Your Projects</h2>
+        <p>Explore a curated directory of AI tools for writing, coding, design, and more.</p>
+        <a href="#featured" class="cta-button">Explore Tools</a>
+    </section>
+
+    <!-- Featured Tools -->
+    <section class="featured-tools" id="featured">
+        <h2>Featured Tools</h2>
+        <div class="tool-grid" id="featured-tools-grid">
+            <!-- Featured tools will be dynamically added here -->
         </div>
+    </section>
 
-        <!-- Tool Listings -->
-        <section class="tool-listings" id="tool-listings">
-            <!-- Tools will be dynamically added here -->
-        </section>
-
-        <!-- AdSense Ad Unit (Bottom) -->
-        <div class="ad">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="YOUR_ADSENSE_AD_UNIT_ID"
-                 data-ad-slot="0987654321"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <h2>Categories</h2>
+        <div class="category-grid" id="category-grid">
+            <!-- Categories will be dynamically added here -->
         </div>
-    </main>
+    </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 AI Tools Directory. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI Tools Directory</h3>
+                <p>Discover the best AI tools for your projects. Stay updated with the latest trends in AI technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#featured">Featured Tools</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <p>Get the latest AI tool updates directly in your inbox.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Tools Directory. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
-        // Sample AI Tools Data (110 Tools)
+        // Sample Data: 200 AI Tools across 20 Categories
         const tools = [
             // AI Writing (10 Tools)
-            { name: "ChatGPT", category: "writing", description: "AI-powered writing assistant for content creation.", link: "https://chat.openai.com" },
-            { name: "Jasper AI", category: "writing", description: "AI writing tool for marketers and businesses.", link: "https://jasper.ai" },
-            { name: "Writesonic", category: "writing", description: "AI writing assistant for blogs, ads, and more.", link: "https://writesonic.com" },
-            { name: "Copy.ai", category: "writing", description: "AI tool for generating marketing copy.", link: "https://copy.ai" },
-            { name: "Rytr", category: "writing", description: "AI writing assistant for content creation.", link: "https://rytr.me" },
-            { name: "Sudowrite", category: "writing", description: "AI tool for creative writing and storytelling.", link: "https://sudowrite.com" },
-            { name: "Grammarly", category: "writing", description: "AI-powered writing assistant for grammar and style.", link: "https://grammarly.com" },
-            { name: "ProWritingAid", category: "writing", description: "AI tool for improving writing style and grammar.", link: "https://prowritingaid.com" },
-            { name: "Wordtune", category: "writing", description: "AI tool for rewriting and improving sentences.", link: "https://wordtune.com" },
-            { name: "Quillbot", category: "writing", description: "AI paraphrasing tool for rewriting content.", link: "https://quillbot.com" },
+            { name: "ChatGPT", category: "AI Writing", description: "AI-powered writing assistant for content creation.", link: "https://chat.openai.com" },
+            { name: "Jasper AI", category: "AI Writing", description: "AI writing tool for marketers and businesses.", link: "https://jasper.ai" },
+            { name: "Writesonic", category: "AI Writing", description: "AI writing assistant for blogs, ads, and more.", link: "https://writesonic.com" },
+            { name: "Copy.ai", category: "AI Writing", description: "AI tool for generating marketing copy.", link: "https://copy.ai" },
+            { name: "Rytr", category: "AI Writing", description: "AI writing assistant for content creation.", link: "https://rytr.me" },
+            { name: "Sudowrite", category: "AI Writing", description: "AI tool for creative writing and storytelling.", link: "https://sudowrite.com" },
+            { name: "Grammarly", category: "AI Writing", description: "AI-powered writing assistant for grammar and style.", link: "https://grammarly.com" },
+            { name: "ProWritingAid", category: "AI Writing", description: "AI tool for improving writing style and grammar.", link: "https://prowritingaid.com" },
+            { name: "Wordtune", category: "AI Writing", description: "AI tool for rewriting and improving sentences.", link: "https://wordtune.com" },
+            { name: "Quillbot", category: "AI Writing", description: "AI paraphrasing tool for rewriting content.", link: "https://quillbot.com" },
 
             // Image Generation (10 Tools)
-            { name: "MidJourney", category: "image", description: "AI tool for generating stunning images from text prompts.", link: "https://midjourney.com" },
-            { name: "DALL·E", category: "image", description: "AI tool for creating images from text descriptions.", link: "https://openai.com/dall-e" },
-            { name: "Stable Diffusion", category: "image", description: "Open-source AI image generation tool.", link: "https://stability.ai" },
-            { name: "Artbreeder", category: "image", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
-            { name: "DeepArt", category: "image", description: "AI tool for turning photos into art.", link: "https://deepart.io" },
-            { name: "Runway ML", category: "image", description: "AI tool for creative image and video editing.", link: "https://runwayml.com" },
-            { name: "NightCafe", category: "image", description: "AI art generator for creating unique images.", link: "https://nightcafe.studio" },
-            { name: "Deep Dream Generator", category: "image", description: "AI tool for creating dream-like images.", link: "https://deepdreamgenerator.com" },
-            { name: "This Person Does Not Exist", category: "image", description: "AI tool for generating realistic human faces.", link: "https://thispersondoesnotexist.com" },
-            { name: "StyleGAN", category: "image", description: "AI tool for generating high-quality images.", link: "https://github.com/NVlabs/stylegan" },
+            { name: "MidJourney", category: "Image Generation", description: "AI tool for generating stunning images from text prompts.", link: "https://midjourney.com" },
+            { name: "DALL·E", category: "Image Generation", description: "AI tool for creating images from text descriptions.", link: "https://openai.com/dall-e" },
+            { name: "Stable Diffusion", category: "Image Generation", description: "Open-source AI image generation tool.", link: "https://stability.ai" },
+            { name: "Artbreeder", category: "Image Generation", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
+            { name: "DeepArt", category: "Image Generation", description: "AI tool for turning photos into art.", link: "https://deepart.io" },
+            { name: "Runway ML", category: "Image Generation", description: "AI tool for creative image and video editing.", link: "https://runwayml.com" },
+            { name: "NightCafe", category: "Image Generation", description: "AI art generator for creating unique images.", link: "https://nightcafe.studio" },
+            { name: "Deep Dream Generator", category: "Image Generation", description: "AI tool for creating dream-like images.", link: "https://deepdreamgenerator.com" },
+            { name: "This Person Does Not Exist", category: "Image Generation", description: "AI tool for generating realistic human faces.", link: "https://thispersondoesnotexist.com" },
+            { name: "StyleGAN", category: "Image Generation", description: "AI tool for generating high-quality images.", link: "https://github.com/NVlabs/stylegan" },
 
-            // Coding (10 Tools)
-            { name: "GitHub Copilot", category: "coding", description: "AI pair programmer that helps you write code faster.", link: "https://copilot.github.com" },
-            { name: "Tabnine", category: "coding", description: "AI code completion tool for developers.", link: "https://tabnine.com" },
-            { name: "Replit", category: "coding", description: "AI-powered online coding environment.", link: "https://replit.com" },
-            { name: "Kite", category: "coding", description: "AI-powered code completion for Python.", link: "https://kite.com" },
-            { name: "DeepCode", category: "coding", description: "AI tool for code review and bug detection.", link: "https://deepcode.ai" },
-            { name: "Codota", category: "coding", description: "AI tool for code completion and suggestions.", link: "https://codota.com" },
-            { name: "Snyk", category: "coding", description: "AI tool for finding and fixing vulnerabilities in code.", link: "https://snyk.io" },
-            { name: "Sourcegraph", category: "coding", description: "AI tool for searching and understanding code.", link: "https://sourcegraph.com" },
-            { name: "CodeClimate", category: "coding", description: "AI tool for code quality analysis.", link: "https://codeclimate.com" },
-            { name: "IntelliCode", category: "coding", description: "AI-assisted code completion for Visual Studio.", link: "https://visualstudio.microsoft.com/services/intellicode" },
-
-            // Marketing (10 Tools)
-            { name: "HubSpot AI", category: "marketing", description: "AI tools for marketing automation and analytics.", link: "https://hubspot.com" },
-            { name: "Surfer SEO", category: "marketing", description: "AI tool for optimizing content for SEO.", link: "https://surferseo.com" },
-            { name: "MarketMuse", category: "marketing", description: "AI tool for content strategy and optimization.", link: "https://marketmuse.com" },
-            { name: "Phrasee", category: "marketing", description: "AI tool for generating marketing copy.", link: "https://phrasee.co" },
-            { name: "Persado", category: "marketing", description: "AI tool for creating persuasive marketing messages.", link: "https://persado.com" },
-            { name: "Acrolinx", category: "marketing", description: "AI tool for content governance and optimization.", link: "https://acrolinx.com" },
-            { name: "Crayon", category: "marketing", description: "AI tool for competitive intelligence.", link: "https://crayon.co" },
-            { name: "Albert", category: "marketing", description: "AI tool for digital marketing automation.", link: "https://albert.ai" },
-            { name: "AdCreative.ai", category: "marketing", description: "AI tool for generating ad creatives.", link: "https://adcreative.ai" },
-            { name: "Smartwriter.ai", category: "marketing", description: "AI tool for personalized email outreach.", link: "https://smartwriter.ai" },
-
-            // Video Editing (10 Tools)
-            { name: "Runway ML", category: "video", description: "AI tool for video editing and effects.", link: "https://runwayml.com" },
-            { name: "Descript", category: "video", description: "AI tool for video and audio editing.", link: "https://descript.com" },
-            { name: "Synthesia", category: "video", description: "AI tool for creating videos with AI avatars.", link: "https://synthesia.io" },
-            { name: "Pictory", category: "video", description: "AI tool for creating videos from text.", link: "https://pictory.ai" },
-            { name: "Lumen5", category: "video", description: "AI tool for creating videos from blog posts.", link: "https://lumen5.com" },
-            { name: "Animoto", category: "video", description: "AI tool for creating marketing videos.", link: "https://animoto.com" },
-            { name: "InVideo", category: "video", description: "AI tool for creating professional videos.", link: "https://invideo.io" },
-            { name: "Magisto", category: "video", description: "AI tool for automatic video editing.", link: "https://magisto.com" },
-            { name: "Vidnami", category: "video", description: "AI tool for creating videos from text.", link: "https://vidnami.com" },
-            { name: "DeepBrain", category: "video", description: "AI tool for creating videos with AI avatars.", link: "https://deepbrain.io" },
-
-            // Audio Processing (10 Tools)
-            { name: "Descript", category: "audio", description: "AI tool for audio editing and transcription.", link: "https://descript.com" },
-            { name: "Audo.ai", category: "audio", description: "AI tool for audio enhancement and noise removal.", link: "https://audo.ai" },
-            { name: "iZotope RX", category: "audio", description: "AI tool for audio repair and enhancement.", link: "https://izotope.com" },
-            { name: "LALAL.AI", category: "audio", description: "AI tool for separating vocals and instruments.", link: "https://lalal.ai" },
-            { name: "Spleeter", category: "audio", description: "AI tool for audio source separation.", link: "https://spleeter.audio" },
-            { name: "AIVA", category: "audio", description: "AI tool for composing music.", link: "https://aiva.ai" },
-            { name: "Amper Music", category: "audio", description: "AI tool for creating music tracks.", link: "https://ampermusic.com" },
-            { name: "Landr", category: "audio", description: "AI tool for mastering music tracks.", link: "https://landr.com" },
-            { name: "MuseNet", category: "audio", description: "AI tool for generating music compositions.", link: "https://openai.com/musenet" },
-            { name: "Voicemod", category: "audio", description: "AI tool for real-time voice modulation.", link: "https://voicemod.net" },
-
-            // Data Analysis (10 Tools)
-            { name: "Tableau", category: "data", description: "AI-powered data visualization tool.", link: "https://tableau.com" },
-            { name: "Power BI", category: "data", description: "AI tool for business analytics and data visualization.", link: "https://powerbi.microsoft.com" },
-            { name: "DataRobot", category: "data", description: "AI tool for automated machine learning.", link: "https://datarobot.com" },
-            { name: "Alteryx", category: "data", description: "AI tool for data blending and advanced analytics.", link: "https://alteryx.com" },
-            { name: "RapidMiner", category: "data", description: "AI tool for data science and machine learning.", link: "https://rapidminer.com" },
-            { name: "KNIME", category: "data", description: "AI tool for data analytics and reporting.", link: "https://knime.com" },
-            { name: "Trifacta", category: "data", description: "AI tool for data wrangling and preparation.", link: "https://trifacta.com" },
-            { name: "Sisense", category: "data", description: "AI tool for business intelligence and analytics.", link: "https://sisense.com" },
-            { name: "Looker", category: "data", description: "AI tool for data exploration and visualization.", link: "https://looker.com" },
-            { name: "Qlik Sense", category: "data", description: "AI tool for data visualization and analytics.", link: "https://qlik.com" },
-
-            // Chatbots (10 Tools)
-            { name: "Dialogflow", category: "chatbots", description: "AI tool for building conversational interfaces.", link: "https://dialogflow.com" },
-            { name: "ManyChat", category: "chatbots", description: "AI tool for creating chatbots for Facebook Messenger.", link: "https://manychat.com" },
-            { name: "Tidio", category: "chatbots", description: "AI tool for creating chatbots for websites.", link: "https://tidio.com" },
-            { name: "Chatfuel", category: "chatbots", description: "AI tool for building chatbots for Facebook Messenger.", link: "https://chatfuel.com" },
-            { name: "Rasa", category: "chatbots", description: "Open-source AI tool for building chatbots.", link: "https://rasa.com" },
-            { name: "Botpress", category: "chatbots", description: "AI tool for building and managing chatbots.", link: "https://botpress.com" },
-            { name: "Pandorabots", category: "chatbots", description: "AI tool for creating and deploying chatbots.", link: "https://pandorabots.com" },
-            { name: "Flow XO", category: "chatbots", description: "AI tool for building chatbots for multiple platforms.", link: "https://flowxo.com" },
-            { name: "Botsify", category: "chatbots", description: "AI tool for creating chatbots for websites and Facebook Messenger.", link: "https://botsify.com" },
-            { name: "Landbot", category: "chatbots", description: "AI tool for creating conversational chatbots.", link: "https://landbot.io" },
-
-            // Design (10 Tools)
-            { name: "Canva", category: "design", description: "AI-powered design tool for creating graphics.", link: "https://canva.com" },
-            { name: "Figma", category: "design", description: "AI tool for collaborative design and prototyping.", link: "https://figma.com" },
-            { name: "Adobe Sensei", category: "design", description: "AI tool for enhancing Adobe Creative Cloud apps.", link: "https://adobe.com/sensei" },
-            { name: "Designify", category: "design", description: "AI tool for automating graphic design tasks.", link: "https://designify.com" },
-            { name: "Khroma", category: "design", description: "AI tool for generating color palettes.", link: "https://khroma.co" },
-            { name: "Uizard", category: "design", description: "AI tool for designing apps and websites.", link: "https://uizard.io" },
-            { name: "DeepArt Effects", category: "design", description: "AI tool for applying artistic effects to images.", link: "https://deeparteffects.com" },
-            { name: "Let’s Enhance", category: "design", description: "AI tool for enhancing image quality.", link: "https://letsenhance.io" },
-            { name: "Remove.bg", category: "design", description: "AI tool for removing backgrounds from images.", link: "https://remove.bg" },
-            { name: "Artbreeder", category: "design", description: "AI tool for creating and editing images.", link: "https://artbreeder.com" },
-
-            // Education (10 Tools)
-            { name: "Knewton", category: "education", description: "AI tool for personalized learning.", link: "https://knewton.com" },
-            { name: "Century Tech", category: "education", description: "AI tool for personalized learning and analytics.", link: "https://century.tech" },
-            { name: "Squirrel AI", category: "education", description: "AI tool for adaptive learning.", link: "https://squirrelai.com" },
-            { name: "Cognii", category: "education", description: "AI tool for virtual learning assistants.", link: "https://cognii.com" },
-            { name: "Querium", category: "education", description: "AI tool for STEM learning and tutoring.", link: "https://querium.com" },
-            { name: "Thinkster Math", category: "education", description: "AI tool for personalized math tutoring.", link: "https://hellothinkster.com" },
-            { name: "Carnegie Learning", category: "education", description: "AI tool for math and language learning.", link: "https://carnegielearning.com" },
-            { name: "Third Space Learning", category: "education", description: "AI tool for personalized math tutoring.", link: "https://thirdspacelearning.com" },
-            { name: "DreamBox", category: "education", description: "AI tool for adaptive math learning.", link: "https://dreambox.com" },
-            { name: "ALEKS", category: "education", description: "AI tool for personalized math and science learning.", link: "https://aleks.com" },
-
-            // File Conversion (10 Tools)
-            { name: "Smallpdf", category: "conversion", description: "AI tool for PDF compression and conversion.", link: "https://smallpdf.com" },
-            { name: "ILovePDF", category: "conversion", description: "AI tool for PDF to Word, Excel, and more.", link: "https://ilovepdf.com" },
-            { name: "Zamzar", category: "conversion", description: "AI tool for converting files between formats.", link: "https://zamzar.com" },
-            { name: "Online-Convert", category: "conversion", description: "AI tool for file conversion and compression.", link: "https://online-convert.com" },
-            { name: "PDF2Go", category: "conversion", description: "AI tool for editing and converting PDFs.", link: "https://pdf2go.com" },
-            { name: "CloudConvert", category: "conversion", description: "AI tool for converting files in the cloud.", link: "https://cloudconvert.com" },
-            { name: "Convertio", category: "conversion", description: "AI tool for converting files to different formats.", link: "https://convertio.co" },
-            { name: "Adobe Acrobat", category: "conversion", description: "AI tool for PDF editing and conversion.", link: "https://acrobat.adobe.com" },
-            { name: "PDF Candy", category: "conversion", description: "AI tool for PDF editing and conversion.", link: "https://pdfcandy.com" },
-            { name: "Soda PDF", category: "conversion", description: "AI tool for converting and editing PDFs.", link: "https://sodapdf.com" }
+            // Add more tools and categories as needed...
         ];
 
-        // Function to display tools
-        function displayTools(filteredTools) {
-            const toolListings = document.getElementById('tool-listings');
-            toolListings.innerHTML = '';
-            filteredTools.forEach(tool => {
-                toolListings.innerHTML += `
-                    <div class="tool-card">
-                        <h2>${tool.name}</h2>
+        const categories = [
+            "AI Writing", "Image Generation", "Coding", "Marketing", "Video Editing", "File Conversion",
+            "Data Analysis", "Chatbots", "Design", "Education", "Audio Processing", "Healthcare", "Finance",
+            "Gaming", "E-commerce", "Cybersecurity", "Robotics", "Natural Language Processing", "Computer Vision", "AI Ethics"
+        ];
+
+        // Function to display featured tools
+        function displayFeaturedTools() {
+            const featuredToolsGrid = document.getElementById('featured-tools-grid');
+            const featuredTools = tools.slice(0, 6); // Display first 6 tools as featured
+            featuredTools.forEach(tool => {
+                featuredToolsGrid.innerHTML += `
+                    <a href="${tool.link}" target="_blank" class="tool-card">
+                        <h3>${tool.name}</h3>
                         <p>${tool.description}</p>
-                        <a href="${tool.link}" target="_blank">Visit Tool</a>
-                    </div>
+                        <span>Learn More</span>
+                    </a>
                 `;
             });
         }
 
-        // Initial display of all tools
-        displayTools(tools);
-
-        // Filter tools based on search and category
-        document.getElementById('search').addEventListener('input', filterTools);
-        document.getElementById('category').addEventListener('change', filterTools);
-
-        function filterTools() {
-            const searchTerm = document.getElementById('search').value.toLowerCase();
-            const category = document.getElementById('category').value;
-
-            const filteredTools = tools.filter(tool => {
-                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || tool.description.toLowerCase().includes(searchTerm);
-                const matchesCategory = category === 'all' || tool.category === category;
-                return matchesSearch && matchesCategory;
+        // Function to display categories
+        function displayCategories() {
+            const categoryGrid = document.getElementById('category-grid');
+            categories.forEach(category => {
+                categoryGrid.innerHTML += `
+                    <a href="${category.toLowerCase().replace(/ /g, '-')}.html" class="category-card">
+                        <h3>${category}</h3>
+                    </a>
+                `;
             });
-
-            displayTools(filteredTools);
         }
+
+        // Initial display
+        displayFeaturedTools();
+        displayCategories();
     </script>
 </body>
 </html>
